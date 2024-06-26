@@ -49,11 +49,11 @@ To run experiments on multi objective optimization task:
 ```bash
 cd multi_objective
 # objective summation on task 1
-python run.py molleo_multi --mol_lm BioT5 --min_obj sa --max_obj jnk3 qed
+python run.py molleo_multi --mol_lm BioT5 --min_obj sa --max_obj jnk3 qed --seed 1 2 3
 # pareto optimal set selection on task 2
-python run.py molleo_multi_pareto --mol_lm GPT-4 --min_obj sa --max_obj gsk3b qed
+python run.py molleo_multi_pareto --mol_lm GPT-4 --min_obj sa --max_obj gsk3b qed --seed 1 2 3
 # pareto optimal set selection on task 3
-python run.py molleo_multi_pareto --mol_lm GPT-4 --min_obj sa gsk3b drd2 --max_obj jnk3 qed
+python run.py molleo_multi_pareto --mol_lm GPT-4 --min_obj sa gsk3b drd2 --max_obj jnk3 qed --seed 1 2 3
 ```
 
 ## Citation
