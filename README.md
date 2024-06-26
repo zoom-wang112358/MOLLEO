@@ -2,19 +2,34 @@
 
 [arXiv] [Efficient Evolutionary Search Over Chemical Space with Large Language Models](https://arxiv.org/abs/2406.16976)
 
-[Website] [MOLLEO Project](https://molleo.github.io/)
+[Website] [MolLEO Project](https://molleo.github.io/)
 
 ## About
 
 MolLEO is an LLM-augmented evlotuionary algorithm for molecular discovery!
 
-![image](images/README/lgga_overview.png)
+![image](images/README/molleo_overview.gif)
 
 ## Setups
-Comming soon
+You need to get an OpenAI API key for GPT-4. BioT5 is an open-source language model which can work on either GPU or CPU. Currently, this code repo does not support MolLEO(MOLSTM), but we will update soon.
 
 ### Package Installation
-Comming soon
+```bash
+conda create -n molleo python=3.9
+conda activate molleo
+conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install PyTDC 
+pip install PyYAML
+pip install rdkit
+pip install transformers
+pip install sentencepiece
+pip install selfies
+```
+
+Then we can activate conda via following command. 
+```bash
+conda activate molleo 
+```
 
 
 ### Experiments
@@ -23,12 +38,22 @@ The experiments are conducted on the following categories: `single obejective op
 To run experiments on single objective optimization task:
 
 ```bash
-cd single_objective 
+cd single_objective
+# BioT5 on jnk3 task
+python run.py molleo --mol_lm BioT5 --oracles jnk3 --seed 1 2 3
+# GPT-4 on gsk3b task
+python run.py molleo --mol_lm GPT-4 --oracles gsk3b --seed 1 2 3
 ```
 To run experiments on multi objective optimization task:
 
 ```bash
-cd multi_objective 
+cd multi_objective
+# objective summation on task 1
+python run.py molleo_multi --mol_lm BioT5 --min_obj sa --max_obj jnk3 qed
+# pareto optimal set selection on task 2
+python run.py molleo_multi_pareto --mol_lm GPT-4 --min_obj sa --max_obj gsk3b qed
+# pareto optimal set selection on task 3
+python run.py molleo_multi_pareto --mol_lm GPT-4 --min_obj sa gsk3b drd2 --max_obj jnk3 qed
 ```
 
 ## Citation
