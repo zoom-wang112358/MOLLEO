@@ -1,6 +1,6 @@
 # MOLLEO
 
-[arXiv] [Efficient Evolutionary Search Over\\ Chemical Space with Large Language Models](https://arxiv.org/abs/2406.16976)
+[arXiv] [Efficient Evolutionary Search Over Chemical Space with Large Language Models](https://arxiv.org/abs/2406.16976)
 
 [Website] [MOLLEO Project](https://molleo.github.io/)
 
@@ -17,7 +17,7 @@ We demonstrate that our algorithm improves both the quality of the final solutio
 
 
 ## Setups
-You need to get an OpenAI API key. Price: BioT5
+Comming soon
 
 ### Package Installation
 Comming soon
