@@ -13,7 +13,7 @@ Namely, we redesign crossover and mutation operations in EAs using LLMs trained 
 We demonstrate that our algorithm improves both the quality of the final solution and convergence speed, thereby reducing the number of required objective evaluations.
 
 
-<img src="lgga_overview.png" width="349" height="302">
+<img src="images/README/lgga_overview.png" width="349" height="302">
 
 
 ## Setups
@@ -49,6 +49,5 @@ If you find our work helpful, please consider citing our paper:
       archivePrefix={arXiv},
       primaryClass={cs.NE}
       url={https://arxiv.org/abs/2406.16976}, 
-}
 }
 ```
