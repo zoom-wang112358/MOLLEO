@@ -8,9 +8,7 @@
 
 MolLEO is an LLM-augmented evlotuionary algorithm for molecular discovery!
 
-<center>
-<img src="images/README/lgga_overview.png" width="349" height="302">
-</center>
+![image](images/README/lgga_overview.png)
 
 ## Setups
 Comming soon
