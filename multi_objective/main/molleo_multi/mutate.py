@@ -134,8 +134,8 @@ def mutate(mol, mutation_rate, mol_lm=None, net=None):
             return np.random.choice(new_mols)
 
     if random.random() > mutation_rate:
-        #return mol
-        return None
+        return mol
+        #return None
 
     p = [0.15, 0.14, 0.14, 0.14, 0.14, 0.14, 0.15]
     for i in range(10):
